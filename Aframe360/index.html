@@ -1,0 +1,32 @@
+<html>
+<head>
+    <script src="https://aframe.io/releases/1.4.0/aframe.min.js"></script>  //GET VR LIBRARY
+    <script src="script.js"></script>
+</head>
+<body>
+    <a-scene>
+        //OPEN SCENE
+        <a-assets>
+            <a-asset-item id="shiba" src="/assets/3d_models/shiba.glb"></a-asset-item>
+            <a-asset-item id="hockeyStick1" src="/assets/3d_models/Hockey Stick.glb"></a-asset-item>
+            <a-asset-item id="hockeyStick2" src="/assets/3d_models/Hockey stick2.glb"></a-asset-item>
+            <a-asset-item id="painting" src="/assets/3d_models/Wall painting.glb"></a-asset-item>
+            <a-asset-item id="paintkit" src="/assets/3d_models/paint kit mini.glb"></a-asset-item>
+            <a-asset-item id="IceSkate" src="/assets/3d_models/Ice skate.glb"></a-asset-item>
+            <audio id="music" preload="auto" src="/assets/aud/light_rain_against_open_windows_indoors.wav"></audio>
+            <img id="skybox" src="/assets/img/House.png">
+        </a-assets>
+        <a-sky src="#skybox" color="#ECECEC"></a-sky>
+        <a-sound src="#music" autoplay="true" loop="true"></a-sound>
+        <a-entity gltf-model="#shiba" scale="1.1 1.1 1.1" position = "2.2 -1 -2" rotation="0 -45 0"></a-entity>
+        <a-entity gltf-model="#hockeyStick1" scale="5 5 5" position = "9 -5 -1" rotation="90 -30 -90"></a-entity>
+        <a-entity gltf-model="#IceSkate" scale="0.35 0.35 0.35" position = "8 -7 -1" rotation="0 -0 0"></a-entity>
+        <a-entity gltf-model="#IceSkate" scale="0.35 0.35 0.35" position = "7 -7 0" rotation="0 -0 0"></a-entity>
+        <a-entity gltf-model="#painting" scale="1 1 1" position = "-14 0 20" rotation="0 80 0"></a-entity>
+        <a-entity gltf-model="#paintkit" scale="7 7 7" position = "-1 0 2" rotation="0 0 0"></a-entity>
+        <a-camera>
+            <a-cursor></a-cursor>
+        </a-camera>
+    </a-scene>
+</body>
+</html>
